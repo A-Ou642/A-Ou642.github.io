@@ -1,8 +1,8 @@
 body { 
     background-color: #000000;
-    color: #FFFFFF; /* Set text color to white for contrast */
+    color: #FFFFFF; 
     font-family: Arial, sans-serif;
-    line-height: 1.6;  /* Set line height for better readability */
+    line-height: 1.6;  
 }
 
 header, nav, main, footer {
@@ -14,7 +14,7 @@ nav a {
   padding: 1rem;
   font-size: 1.5rem;
   color: #00FF00;
-  text-decoration: none; /* Remove underline from links */
+  text-decoration: none; 
 }
 
 nav a:hover {
@@ -45,4 +45,9 @@ footer {
 nav a.active {
     color: orange;
     border-bottom: 2px solid lightblue;
+}
+
+footer-logo {
+    width: 120px;
+    height: auto;
 }
