@@ -98,3 +98,12 @@ table {
     color: #FFFFFF;
     list-style-position: inside;
  }
+
+ /* For contact.html */
+ iframe {
+    display: block;
+    width: min(100%, 40rem);
+    min-height: 40rem; 
+    margin: 0 auto; 
+    border: 1px solid #dbe4f0;
+ }
