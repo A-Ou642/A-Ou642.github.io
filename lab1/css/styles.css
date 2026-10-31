@@ -54,6 +54,10 @@ nav a.active {
     height: auto;
 }
 
+.quote{
+    margin-top: 2rem;
+}
+
 /* For about.html */
 table {
     border-collapse: collapse;
