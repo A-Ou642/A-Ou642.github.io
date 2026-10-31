@@ -45,7 +45,7 @@ footer {
 }
 
 nav a.active {
-    color: rgb(153, 0, 255);
+    color: rgb(208, 255, 0);
     border-bottom: 2px solid rgb(228, 236, 239);
 }
 
@@ -86,4 +86,15 @@ table {
  #about-main {
     display: block;
     margin: 0 auto;
+ }
+
+ .header-2 {
+    margin-top: 2rem;
+ }
+
+ .interest-item {
+    margin-bottom: 0.8rem;
+    padding: 0.5rem;
+    color: #FFFFFF;
+    list-style-position: inside;
  }
