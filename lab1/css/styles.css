@@ -41,7 +41,7 @@ main {
 
 footer { 
     font-size: 0.8rem;
-    color: #AAAAAA;
+    color: #e8e8e8;
 }
 
 nav a.active {
@@ -72,7 +72,7 @@ table {
  }
 
  .table-row {
-    background-color: f2f2f2;
+    background-color: #f2f2f2;
     color: #000000;
 
  }
