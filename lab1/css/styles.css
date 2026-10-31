@@ -21,9 +21,9 @@ nav a {
 
 nav a:hover {
   color: #fff;
-  background-color: #173f73;
+  background-color: #00bee9;
   font-size: 2rem;
-  border-bottom: 2px solid orange;
+  border-bottom: 2px solid rgb(34, 255, 0);
 }
 
 figure img {
@@ -45,8 +45,8 @@ footer {
 }
 
 nav a.active {
-    color: orange;
-    border-bottom: 2px solid lightblue;
+    color: rgb(153, 0, 255);
+    border-bottom: 2px solid rgb(228, 236, 239);
 }
 
 .footer-logo {
