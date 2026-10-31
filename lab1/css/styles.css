@@ -15,12 +15,12 @@ nav a {
   display: inline-block;
   padding: 1rem;
   font-size: 1.5rem;
-  color: #2cdf11;
+  color: #36e41b;
   text-decoration: none; 
 }
 
 nav a:hover {
-  color: #fff;
+  color: #d6dd0f;
   background-color: #00bee9;
   font-size: 2rem;
   border-bottom: 2px solid rgb(34, 255, 0);
