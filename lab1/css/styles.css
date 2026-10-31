@@ -1,3 +1,5 @@
+/* HTML: index, about, and contact */
+
 body { 
     background-color: #000000;
     color: #FFFFFF; 
@@ -51,3 +53,33 @@ nav a.active {
     width: 120px;
     height: auto;
 }
+
+/* For about.html */
+table {
+    border-collapse: collapse;
+    margin: 0 auto 2rem;
+    width: 75%;
+ }
+
+ #table-header {
+    background-color: #173f73;
+    color: #FFFFFF;
+
+ }
+
+ .table-row {
+    background-color: f2f2f2;
+    color: #000000;
+
+ }
+
+ th, td {
+    border: 1px solid #dbe4f0;
+    padding: 0.5rem;
+    text-align: left;
+ }
+
+ #about-main {
+    display: block;
+    margin: 0 auto;
+ }
