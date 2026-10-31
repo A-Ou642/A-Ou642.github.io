@@ -106,10 +106,16 @@ table {
  }
 
  /* For contact.html */
+main:has(iframe) section {
+    width: 100%;
+}
+
+
  iframe {
     display: block;
     width: min(95%, 40rem);
-    height: 800px; 
+    height: 850px; 
     margin: 0 auto; 
     border: 1px solid #dbe4f0;
+    box-sizing: border-box;
  }
