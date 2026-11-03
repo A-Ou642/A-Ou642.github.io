@@ -70,3 +70,12 @@ section, article, aside {
     align-items: center;
 }
 
+/* Footer for all pages */
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #333333;
+    margin-top: 2rem;
+    padding: 1rem;
+}
