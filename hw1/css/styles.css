@@ -71,7 +71,6 @@ section, article, aside {
 }
 
 /* Footer for all pages */
-
 footer {
     display: flex;
     justify-content: center;
