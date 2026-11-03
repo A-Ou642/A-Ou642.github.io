@@ -73,9 +73,23 @@ section, article, aside {
 /* Footer for all pages */
 
 footer {
-    text-align: center;
-    font-size: 0.8rem;
-    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
     margin-top: 2rem;
     padding: 1rem;
+    font-size: 0.8rem;
+    color: #333333;
+}
+
+.footer-logo {
+    width: 100px;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.footer-text {
+    text-align: left;
 }
