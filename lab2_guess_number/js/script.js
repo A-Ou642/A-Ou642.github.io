@@ -60,11 +60,19 @@ function checkGuess(){
     if (guess == randomNumber) {
         feedback.textContent = "You guessed it! You Won!";
         feedback.style.color = "blue";
+
+        wins++;
+        document.querySelector("#totalWins").textContent = wins;
+
         gameOver();
     } else {
         if (attempts == 7) {
             feedback.textContent = "Sorry, you lost! The number was " + randomNumber;
             feedback.style.color = "red";
+
+            losses++;
+            document.querySelector("#totalLosses").textContent = losses;
+
             gameOver();
         } else if ( guess > randomNumber) {
             feedback.textContent = "Guess was too high";
