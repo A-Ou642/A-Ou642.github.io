@@ -8,15 +8,18 @@ document.querySelector("#resetBtn").addEventListener("click", initializeGame);
 //Global variables
 let randomNumber;
 let attempts = 0;
+let wins = 0;
+let losses = 0;
 
 initializeGame();
 
-    
+
 function initializeGame() {
     randomNumber = Math.floor(Math.random() * 99) + 1;
     console.log("Random number:" + randomNumber);
 
     attempts = 0;
+    document.querySelector("#attemptsLeft").textContent = 7;
 
     // Hiding the Reset button
     document.querySelector("#resetBtn").style.display = "none";
@@ -39,9 +42,9 @@ function initializeGame() {
 function checkGuess(){
     let feedback = document.querySelector("#feedback");
     feedback.textContent = "";
-    let guess = document.querySelector("#playerGuess").value;
+    let guess = Number(document.querySelector("#playerGuess").value);
     console.log("Player guess: " + guess);
-    if (guess < 1 || guess > 99) {
+    if (!Number.isInteger(guess) || guess < 1 || guess > 99) {
         feedback.textContent = "Enter a number between 1 and 99";
         feedback.style.color = "red"; 
         return;
@@ -49,6 +52,7 @@ function checkGuess(){
 
     attempts++; 
     console.log("Attempts:" + attempts);
+    document.querySelector("#attemptsLeft").textContent = 7 - attempts;
 
     document.querySelector("#guesses").textContent += guess + " ";
 
