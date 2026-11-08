@@ -58,7 +58,7 @@ function checkGuess(){
 
     feedback.style.color = "green";
     if (guess == randomNumber) {
-        feedback.textContent = "You guessed it! You Won!";
+        feedback.textContent = "You guessed it! You Won with " + attempts + "attempt(s)!";
         feedback.style.color = "blue";
 
         wins++;
