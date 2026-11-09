@@ -39,6 +39,25 @@ function gradeQuiz() {
         wrongAnswer(2);
     }
 
+    // Grade Question 3
+    if (document.querySelector("#Jefferson").checked &&
+        document.querySelector("#Roosevelt").checked &&
+        !document.querySelector("#Jackson").checked &&
+        !document.querySelector("#Franklin").checked) {
+        rightAnswer(3);
+    } else {
+        wrongAnswer(3);
+    }
+
+    // Grade Question 4
+    let selectedQ4 = document.querySelector("input[name=q4]:checked");
+
+    if (selectedQ4 !== null && selectedQ4.value === "Rhode Island") {
+        rightAnswer(4);
+    } else {
+        wrongAnswer(4);
+    }
+
     // Display total score
     document.querySelector("#totalScore").textContent = `Total Score: ${score}`;
 }
@@ -60,7 +79,8 @@ function rightAnswer(index) {
   let feedback = document.querySelector(`#q${index}Feedback`);
   feedback.textContent = "Correct!";
   feedback.className = "bg-success text-white";
-  setMarkImage(index, "checkmark.png", "Checkmark");
+
+  setMarkImage(index, "checkmark-image.jpg", "Checkmark");
   score += 20;
 }
 
@@ -68,5 +88,6 @@ function wrongAnswer(index) {
   let feedback = document.querySelector(`#q${index}Feedback`);
   feedback.textContent = "Incorrect!";
   feedback.className = "bg-warning text-white";
-  setMarkImage(index, "xmark.png", "X mark");
+
+  setMarkImage(index, "xmark-image2.jpg", "X mark");
 }
