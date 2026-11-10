@@ -58,10 +58,18 @@ function gradeQuiz() {
         wrongAnswer(4);
     }
 
-    //Grade Questions 5
-    
+    // Grade Question 5
+    let q5Response = document.querySelector("#q5").value.trim().toLowerCase();
+
+    if (q5Response === "illinois") {
+        rightAnswer(5);
+    } else {
+        wrongAnswer(5);
+    }
 
     //Grade Questions 6
+
+
     //Grade Questions 7
     //Grade Questions 8
     //Grade Questions 9
