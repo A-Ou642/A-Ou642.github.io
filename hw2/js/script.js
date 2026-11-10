@@ -67,18 +67,51 @@ function gradeQuiz() {
         wrongAnswer(5);
     }
 
-    //Grade Questions 6
+    // Grade Question 6
+    let selectedQ6 = document.querySelector("input[name='q6']:checked");
 
+    if (selectedQ6 !== null && selectedQ6.value === "Peru") {
+        rightAnswer(6);
+    } else {
+        wrongAnswer(6);
+    }
 
-    //Grade Questions 7
-    //Grade Questions 8
-    //Grade Questions 9
-    //Grade Questions 10
+    // Grade Question 7
+    let q7Response = document.querySelector("#q7").value;
 
+    if (q7Response === "Kobe") {
+        rightAnswer(7);
+    } else {
+        wrongAnswer(7);
+    }
 
+    // Grade Question 8
+    if (document.querySelector("#q8France").checked &&
+        document.querySelector("#q8Germany").checked &&
+        !document.querySelector("#q8Japan").checked &&
+        !document.querySelector("#q8Brazil").checked) {
+        rightAnswer(8);
+    } else {
+        wrongAnswer(8);
+    }
 
+    // Grade Question 9
+    let q9Response = document.querySelector("#q9").value;
 
+    if (Number(q9Response) === 47) {
+        rightAnswer(9);
+    } else {
+        wrongAnswer(9);
+    }
 
+    // Grade Question 10
+    let selectedQ10 = document.querySelector("input[name='q10']:checked");
+
+    if (selectedQ10 !== null && selectedQ10.value === "Switzerland") {
+        rightAnswer(10);
+    } else {
+        wrongAnswer(10);
+    }
 
     // Display total score
     document.querySelector("#totalScore").textContent = `Total Score: ${score}`;
@@ -139,7 +172,7 @@ function rightAnswer(index) {
   feedback.className = "bg-success text-white";
 
   setMarkImage(index, "checkmark-image.jpg", "Checkmark");
-  score += 20;
+  score += 10;
 }
 
 function wrongAnswer(index) {
