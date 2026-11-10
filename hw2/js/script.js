@@ -58,12 +58,62 @@ function gradeQuiz() {
         wrongAnswer(4);
     }
 
+    //Grade Questions 5
+    
+
+    //Grade Questions 6
+    //Grade Questions 7
+    //Grade Questions 8
+    //Grade Questions 9
+    //Grade Questions 10
+
+
+
+
+
+
     // Display total score
     document.querySelector("#totalScore").textContent = `Total Score: ${score}`;
+
+    let totalScore = document.querySelector("#totalScore");
+
+    if (score < 80) {
+        totalScore.style.color = "red";
+    } else {
+        totalScore.style.color = "green";
+    }
+
+    let congratsMessage = document.querySelector("#congratsMessage");
+
+    if (score > 80) {
+        congratsMessage.textContent = "Congratulations! You did an excellent job!";
+    } else {
+        congratsMessage.textContent = "";
+    }
+
+    // Update total attempts
+    attempts++;
+
+    document.querySelector("#totalAttempts").textContent =
+        `Total Attempts: ${attempts}`;
+
+    localStorage.setItem("total_attempts", attempts);
 }
 
 
 let score =0;
+
+let attempts = localStorage.getItem("total_attempts");
+
+if (attempts === null) {
+    attempts = 0;
+} else {
+    attempts = Number(attempts);
+}
+
+document.querySelector("#totalAttempts").textContent =
+    `Total Attempts: ${attempts}`;
+
 
 function setMarkImage(index, imageName, altText) {
   let markContainer = document.querySelector(`#markImg${index}`);
@@ -90,4 +140,39 @@ function wrongAnswer(index) {
   feedback.className = "bg-warning text-white";
 
   setMarkImage(index, "xmark-image2.jpg", "X mark");
+}
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        let temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
+
+displayQ4Choices();
+
+function displayQ4Choices() {
+    let q4ChoicesArray = ["Maine", "Rhode Island", "Maryland", "Delaware"];
+    shuffleArray(q4ChoicesArray);
+
+    let choicesContainer = document.querySelector("#q4Choices");
+    choicesContainer.textContent = "";
+
+    for (let choice of q4ChoicesArray) {
+        let input = document.createElement("input");
+        input.type = "radio";
+        input.name = "q4";
+        input.id = choice;
+        input.value = choice;
+
+        let label = document.createElement("label");
+        label.htmlFor = choice;
+        label.textContent = choice;
+
+        choicesContainer.appendChild(input);
+        choicesContainer.appendChild(label);
+        choicesContainer.appendChild(document.createTextNode(" "));
+    }
 }
