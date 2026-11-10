@@ -127,9 +127,9 @@ function gradeQuiz() {
     let congratsMessage = document.querySelector("#congratsMessage");
 
     if (score > 80) {
-        congratsMessage.textContent = "Congratulations! You did an excellent job!";
+        congratsMessage.textContent = "Congratulations! You did a fantastic job!";
     } else {
-        congratsMessage.textContent = "";
+        congratsMessage.textContent = "Try again! You can do it!!";
     }
 
     // Update total attempts
