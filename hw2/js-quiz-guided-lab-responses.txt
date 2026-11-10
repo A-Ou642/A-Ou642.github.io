@@ -1,0 +1,100 @@
+Guided Lab: JavaScript Geography Quiz
+Checkpoint Responses
+
+Downloaded: 11/9/2026, 3:48:06 PM
+
+Started: 11/5/2026, 4:40:18 PM
+Completed: 11/8/2026, 7:21:15 PM
+Time spent: 4480 minute(s), 57 second(s)
+Lesson 1: Set up the quiz page
+Question:
+Why does the textbox need an id value such as q1?
+
+Student response:
+To identify and access for that specific element from the input to receive user's answer to check for correct response.
+
+----------------------------------------
+
+Started: 11/8/2026, 7:21:15 PM
+Completed: 11/8/2026, 7:34:46 PM
+Time spent: 13 minute(s), 31 second(s)
+Lesson 2: Add Bootstrap and connect JavaScript
+Question:
+What event is the button listening for, and what function runs when that event happens?
+
+Student response:
+The button is for click event . Users will click the Submit Quiz Button, the gradeQuiz() function to run and receive user's answers from the textbox.
+
+----------------------------------------
+
+Started: 11/8/2026, 7:32:46 PM
+Completed: 11/8/2026, 7:49:13 PM
+Time spent: 16 minute(s), 27 second(s)
+Lesson 3: Validate the first question
+Question:
+Why do we need this line of code?
+
+Student response:
+This line clear previous error messages before validating the form again. It prevents old errors from showing after the user corrects their answer.
+
+----------------------------------------
+
+Started: 11/8/2026, 7:49:13 PM
+Completed: 11/8/2026, 8:19:38 PM
+Time spent: 30 minute(s), 25 second(s)
+Lesson 4: Grade the first question
+Question:
+What is this line of code doing?
+
+Student response:
+That line adds an image element inside markImg1 span displaying checkmark or X mark next to the question.
+
+----------------------------------------
+
+Started: 11/8/2026, 8:19:38 PM
+Completed: 11/8/2026, 8:31:52 PM
+Time spent: 12 minute(s), 14 second(s)
+Lesson 5: Add a dropdown question and refactor feedback
+Question:
+What value is stored in q2Response when the user selects Missouri, and why?
+
+Student response:
+The value stored in q2Response is "mo" because Missouri's option has the attribute value set to "mo".
+
+----------------------------------------
+
+Started: 11/8/2026, 8:31:52 PM
+Completed: 11/8/2026, 9:24:29 PM
+Time spent: 52 minute(s), 36 second(s)
+Lesson 6: Add checkboxes and radio buttons
+Question:
+Why do the radio buttons all need the same name value?
+
+Student response:
+Radio button needs the same name to belong into one group. This allows users to select only one answer at a time.
+
+----------------------------------------
+
+Started: 11/8/2026, 9:24:29 PM
+Completed: 11/9/2026, 3:22:16 PM
+Time spent: 1077 minute(s), 48 second(s)
+Lesson 7: Randomize radio button choices
+Question:
+What is the main reason for implementing the displayQ4Choices() function?
+
+Student response:
+The function changes randomly on the order of the button choices each time the page loads to prevent answers from always appearing in same order.
+
+----------------------------------------
+
+Started: 11/9/2026, 3:22:16 PM
+Completed: 11/9/2026, 3:47:55 PM
+Time spent: 25 minute(s), 39 second(s)
+Lesson 8: Store total attempts with localStorage
+Question:
+Why does the attempts variable reset after a page reload unless we save it in localStorage?
+
+Student response:
+The attempts variable resets since the variables do not keep their value when the page reloads. The localStorage saves the value for retrieval after refreshing the page.
+
+----------------------------------------
