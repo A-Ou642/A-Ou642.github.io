@@ -42,7 +42,7 @@ async function loadStates(){
   let defaultOption = document.createElement("option");
   defaultOption.value = "";
   defaultOption.textContent = "Select One";
-  stateMenu.appendChild(defaultOptions);
+  stateMenu.appendChild(defaultOption);
 
   try {
     let url = "http://csumb.space/api/allStatesAPI.php";
