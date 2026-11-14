@@ -53,7 +53,7 @@ async function loadStates(){
       let option = document.createElement("option");
       option.value = items.usps;
       option.textContent = items.state;
-      stateMenu.appentChild(option);
+      stateMenu.appendChild(option);
     }
   } catch (error){
     console.error(error);
