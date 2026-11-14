@@ -21,7 +21,7 @@ async function displayCity() {
 
         document.querySelector("#city").textContent = data.city;
         document.querySelector("#latitude").textContent = data.latitude;
-        document.querySelector("#longitude".textContent) = data.longitude;
+        document.querySelector("#longitude").textContent = data.longitude;
 
     } catch (error) {
         document.querySelector("#city").textContent = "Unable to retrieve city";
