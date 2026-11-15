@@ -6,6 +6,8 @@ document.querySelector("#username").addEventListener("change", checkUsername);
 
 document.querySelector("#signupForm").addEventListener("submit", validateForm);
 
+document.querySelector("#state").addEventListener("change", loadCounties);
+
 async function displayCity() {
 
     // alert(document.querySelector("#zip").value);
@@ -106,7 +108,10 @@ async function validateForm(event) {
     let password = document.querySelector("#password").value;
     let passwordError = document.querySelector("#passwordError");
 
+    let passwordAgain = document.querySelector("#passwordAgain").value;
+
     usernameError.textContent = "";
+    passwordError.textContent = "";
 
     if (username.length === 0) {
         usernameError.textContent = "Username required";
@@ -120,18 +125,46 @@ async function validateForm(event) {
         }
     }
 
-    if (isValid) {
-        document.querySelector("#signupForm").submit();
-    }
-
     if (password.length < 6) {
-      passwordError.textContent = "Password must be at least 6 characters.";
-      passwordError.textContent = "";
+      passwordError.textContent = "Passwords must be at least 6 characters.";
+      passwordError.style.color = "red";
+      isValid = false;
+    } else if (password !== passwordAgain) {
+      passwordError.textContent = "Password do not match.";
       passwordError.style.color = "red";
       isValid = false;
     }
 
-    if (isValid) {
+     if (isValid) {
       document.querySelector("#signupForm").submit();
     }
+}
+
+async function loadCounties(){
+
+  let countyMenu = document.querySelector("#county");
+  let selectedState = document.querySelector("#state").value;
+
+  countyMenu.textContent = "";
+
+  if (selectedState === "") {
+    return;
+  }
+
+  let url = `https://csumb.space/api/countyListAPI.php?state=${selectedState}`;
+  let response = await fetch(url);
+  let data = await response.json();
+
+
+  for (let item of data) {
+    let option = document.createElement("option");
+
+    option.value = item.county;
+    option.textContent = item.county;
+
+    countyMenu.appendChild(option);
+
+
+  }
+
 }
