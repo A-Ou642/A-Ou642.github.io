@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", loadStates);
+loadStates();
 
 document.querySelector("#zip").addEventListener("change", displayCity);
 
@@ -23,11 +23,17 @@ async function displayCity() {
       let data = await response.json();
 
       if (data === false) {
-        document.querySelector("#city").textContent = "Zip code not found";
+
+        document.querySelector("#zipError").textContent = "Zip code not found";
+        document.querySelector("#city").textContent = "";
         document.querySelector("#latitude").textContent = "";
         document.querySelector("#longitude").textContent = "";
         return;
       }
+
+      // To clear errors when input is valid
+      document.querySelector("#zipError").textContent = "";
+
 
       document.querySelector("#city").textContent = data.city;
       document.querySelector("#latitude").textContent = data.latitude;
