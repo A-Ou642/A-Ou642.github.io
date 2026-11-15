@@ -8,6 +8,8 @@ document.querySelector("#signupForm").addEventListener("submit", validateForm);
 
 document.querySelector("#state").addEventListener("change", loadCounties);
 
+document.querySelector("#password").addEventListener("focus", suggestedPassword);
+
 async function displayCity() {
 
     // alert(document.querySelector("#zip").value);
@@ -130,7 +132,7 @@ async function validateForm(event) {
       passwordError.style.color = "red";
       isValid = false;
     } else if (password !== passwordAgain) {
-      passwordError.textContent = "Password do not match.";
+      passwordError.textContent = "Passwords do not match.";
       passwordError.style.color = "red";
       isValid = false;
     }
@@ -163,8 +165,15 @@ async function loadCounties(){
     option.textContent = item.county;
 
     countyMenu.appendChild(option);
-
-
   }
+}
+
+async function suggestedPassword() {
+  let url = "https://csumb.space/api/suggestedPassword.php?length=8";
+
+  let response = await fetch(url);
+  let data = await response.json();
+  
+  document.querySelector("#suggestedPassword").textContent = "Suggested Password: " + data.password;
 
 }
