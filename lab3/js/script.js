@@ -103,6 +103,9 @@ async function validateForm(event) {
     let username = document.querySelector("#username").value;
     let usernameError = document.querySelector("#usernameError");
 
+    let password = document.querySelector("#password").value;
+    let passwordError = document.querySelector("#passwordError");
+
     usernameError.textContent = "";
 
     if (username.length === 0) {
@@ -119,5 +122,11 @@ async function validateForm(event) {
 
     if (isValid) {
         document.querySelector("#signupForm").submit();
+    }
+
+    if (password.length < 6) {
+      passwordError.textContent = "Password must be at least 6 characters."
+      passwordError.style.color = "red";
+      isValid = false;
     }
 }
