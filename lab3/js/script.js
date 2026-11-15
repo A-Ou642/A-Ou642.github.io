@@ -2,11 +2,12 @@ document.addEventListener("DOMContentLoaded", loadStates);
 
 document.querySelector("#zip").addEventListener("change", displayCity);
 
+document.querySelector("#username").addEventListener("change", checkUsername);
+
+
 async function displayCity() {
 
     // alert(document.querySelector("#zip").value);
-
-
 
   try {
       let zipCode = document.querySelector("#zip").value;
@@ -29,7 +30,7 @@ async function displayCity() {
 
     } catch (error) {
       document.querySelector("#city").textContent = "Unable to retrieve city";
-        onsole.error(error);
+        console.error(error);
     }
 
 }
@@ -45,7 +46,7 @@ async function loadStates(){
   stateMenu.appendChild(defaultOption);
 
   try {
-    let url = "http://csumb.space/api/allStatesAPI.php";
+    let url = "https://csumb.space/api/allStatesAPI.php";
     let response = await fetch(url);
     let data = await response.json();
 
@@ -66,4 +67,29 @@ async function loadStates(){
     stateMenu.appendChild(errorOption);
   }
 
+}
+
+async function checkUsername() {
+    let username = document.querySelector("#username").value;
+    let usernameError = document.querySelector("#usernameError");
+
+    if (username.length === 0) {
+        usernameError.textContent = "Username required";
+        usernameError.style.color = "red";
+        return false;
+    }
+
+    let url = `https://csumb.space/api/usernamesAPI.php?username=${username}`;
+    let response = await fetch(url);
+    let data = await response.json();
+
+    if (data.available) {
+        usernameError.textContent = "Username available!";
+        usernameError.style.color = "green";
+        return true;
+    } else {
+        usernameError.textContent = "Username taken";
+        usernameError.style.color = "red";
+        return false;
+    }
 }
