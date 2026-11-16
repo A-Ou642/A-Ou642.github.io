@@ -1,3 +1,21 @@
 body {
-    background-color: lightblue
+    background-color: rgb(184, 221, 233)
+}
+
+h1 {
+    text-align: center;
+    color: #234567;
+    margin-top: 30px;
+}
+
+form {
+    text-align: center;
+    margin: 30px auto;
+    padding: auto;
+}
+
+input {
+    padding: 10px;
+    border: 3px solid #234567;
+    border-radius: 8px;
 }
