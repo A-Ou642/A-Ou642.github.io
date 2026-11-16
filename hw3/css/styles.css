@@ -22,14 +22,14 @@ input {
 
 button {
     background-color: yellowgreen;
-    color: white;
+    color: black;
     padding: 10px 10px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
 }
 
-#result {
+#results {
     text-align: center;
     margin: 30px auto;
     padding: 20px;
