@@ -3,9 +3,17 @@ body {
 }
 
 h1 {
+    font-family: "Bebas Neue", sans-serif;
     text-align: center;
     color: #234567;
     margin-top: 30px;
+}
+
+label {
+    font-family: "Averia Serif Libre", serif;
+    text-align: center;
+    color: black;
+    margin: 10px;
 }
 
 form {
@@ -36,7 +44,7 @@ button {
     max-width: 500px;
 }
 
-#result img {
+#results img {
     width: 200px;
     height: auto;
     border-radius: 12px;
